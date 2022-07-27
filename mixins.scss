@@ -1,0 +1,8 @@
+// px to rem
+// font-size: toRem(20)
+$browser-context: 16; // Default
+
+@function toRem($pixels, $context: $browser-context) {
+  $remValue: calc($pixels/$context) + rem;
+  @return $remValue;
+}
